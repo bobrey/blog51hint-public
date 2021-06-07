@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - linux</title>
+	<link href="https://blog.51hint.com/tags/linux/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.51hint.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-07T00:00:00+00:00</updated>
+	<id>https://blog.51hint.com/tags/linux/atom.xml</id>
+	<entry xml:lang="en">
+		<title>日本語環境にする</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/jp-lang/" type="text/html"/>
+		<id>https://blog.51hint.com/jp-lang/</id>
+		<content type="html">&lt;p&gt;日本語環境にする&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;1.日本語関連のパッケージをインストールします。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; apt&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; install language-pack-ja-base language-pack-ja ibus-mozc
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;システムの文字セットを日本語に変更します。&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; localectl set-locale LANG=ja_JP.UTF-8 LANGUAGE=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ja_JP:ja&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; source &#x2F;etc&#x2F;default&#x2F;locale
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; echo $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LANG
+ja_JP.UTF-8     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 変更された
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; passwd     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 試しに何かしてみる
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;新しいUNIXパスワードを入力してください:     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 日本語になっている
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Debian&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt-get install locales
+$ sudo vim &#x2F;etc&#x2F;locale.gen
+ja_JP.UTF-8の行のコメントを解除
+$ sudo locale-gen
+$ sudo update-locale LANG=ja_JP.UTF-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ubuntu&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt install language-pack-ja
+$ sudo update-locale LANG=ja_JP.UTF-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>ssh keys加密算法ed25519和rsa的生成以及比较</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/ssh-key/" type="text/html"/>
+		<id>https://blog.51hint.com/ssh-key/</id>
+		<content type="html">&lt;p&gt;ed25519加密解密很快,生成时间短而且安全性更高,
+rsa则加密解密稍慢,生成时间长,安全性没有ed25519高,
+只是rsa基本都是默认,所以用的人更多,
+但是建议转换为ed25519,网站软件现在基本都支持了.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ssh-keygen -t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; ed25519&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -C &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;XXX&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; (XXX为标记,随便起个名称)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Generating&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; public&#x2F;private ed25519 key pair.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Enter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file in which to save the key (&#x2F;home&#x2F;xxx&#x2F;.ssh&#x2F;id_ed25519)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; (文件保存位置,一般默认就好)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Enter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; passphrase (empty for no passphrase)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; (密码,如果想使用时不输密码,留空即可)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Enter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; same passphrase again: (再次确认密码,留空的还是直接回车)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; identification has been saved in &#x2F;home&#x2F;xxx&#x2F;.ssh&#x2F;id_ed25519.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; public key has been saved in &#x2F;home&#x2F;xxx&#x2F;.ssh&#x2F;id_ed25519.pub.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;The&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; key fingerprint is:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; XXX(这几位是最上面填写的名称,在在公钥最后显示)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;The&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; key&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;s randomart image is:(返回的随即生成图形)
++--[ED25519 256]--+
+|                 |
+|                 |
+|                 |
+|                 |
+| xxxxxxxxxxxxxxx |
+|ooooooooooooo    |
+|                 |
+|                 |
+|                 |
++----[SHA256]-----+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;这样ed25519算法的密钥就生成完毕了, id_ed25519.pub是公钥,粘贴到github之类的网站即可,id_ed25519是私钥,一定要保存好,且不能随便给他人&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

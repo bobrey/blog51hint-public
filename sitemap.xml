@@ -7,6 +7,10 @@
         <loc>https://blog.51hint.com/about/</loc>
     </url>
     <url>
+        <loc>https://blog.51hint.com/ansible/</loc>
+        <lastmod>2021-06-07</lastmod>
+    </url>
+    <url>
         <loc>https://blog.51hint.com/categories/</loc>
     </url>
     <url>
@@ -14,6 +18,9 @@
     </url>
     <url>
         <loc>https://blog.51hint.com/categories/hello-world/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/categories/linux/</loc>
     </url>
     <url>
         <loc>https://blog.51hint.com/categories/odd/</loc>
@@ -41,8 +48,28 @@
         <lastmod>2018-07-04</lastmod>
     </url>
     <url>
+        <loc>https://blog.51hint.com/fuelphp/</loc>
+        <lastmod>2021-06-07</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/jp-lang/</loc>
+        <lastmod>2021-06-07</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/laravel/</loc>
+        <lastmod>2021-06-07</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/mac-k3s/</loc>
+        <lastmod>2021-06-07</lastmod>
+    </url>
+    <url>
         <loc>https://blog.51hint.com/markdown-overview/</loc>
         <lastmod>2018-07-18</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/matrix/</loc>
+        <lastmod>2021-06-07</lastmod>
     </url>
     <url>
         <loc>https://blog.51hint.com/ninth-post/</loc>
@@ -56,6 +83,12 @@
     </url>
     <url>
         <loc>https://blog.51hint.com/page/3/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/page/4/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/page/5/</loc>
     </url>
     <url>
         <loc>https://blog.51hint.com/second-post/</loc>
@@ -78,13 +111,41 @@
         <lastmod>2017-09-25</lastmod>
     </url>
     <url>
+        <loc>https://blog.51hint.com/ssh-key/</loc>
+        <lastmod>2021-06-07</lastmod>
+    </url>
+    <url>
         <loc>https://blog.51hint.com/tags/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/ansible/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/fuelphp/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/k3s/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/laravel/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/linux/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/matrix/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/php/</loc>
     </url>
     <url>
         <loc>https://blog.51hint.com/tags/placeholder-posts/</loc>
     </url>
     <url>
         <loc>https://blog.51hint.com/tags/prime-number-posts/</loc>
+    </url>
+    <url>
+        <loc>https://blog.51hint.com/tags/riot/</loc>
     </url>
     <url>
         <loc>https://blog.51hint.com/tags/rust/</loc>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - ansible</title>
+	<link href="https://blog.51hint.com/tags/ansible/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.51hint.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-07T00:00:00+00:00</updated>
+	<id>https://blog.51hint.com/tags/ansible/atom.xml</id>
+	<entry xml:lang="en">
+		<title>ansible</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/ansible/" type="text/html"/>
+		<id>https://blog.51hint.com/ansible/</id>
+		<content type="html">&lt;p&gt;Ansible 自动化运营。&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;anoyi.com&#x2F;p&#x2F;62388a4fcbc6&quot;&gt;1 小时学会 Ansible&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;showme.codes&#x2F;2019-09-19&#x2F;understand-ansible&#x2F;&quot;&gt;这样理解Ansible更容易&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;linuxhint.com&#x2F;set_mysql_root_password_ansible&#x2F;&quot;&gt;How to Set MySQL Root Password using Ansible&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zhanglianghhh&#x2F;ansible-example-lnmp&quot;&gt;ansible lnmp&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

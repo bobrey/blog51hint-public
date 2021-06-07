@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title> - 日本語環境にする</title>
+
+      
+
+      
+          <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script> -->
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;slideout.min.js"></script>
+          
+      
+
+      
+          <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;site.css">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="/" class="logo">IT技术分享</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                            Tags
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                            About
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo"><a href="https:&#x2F;&#x2F;blog.51hint.com">IT技术分享</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+
+                    <div class="search-container">
+                        <input id="search" type="search" placeholder="🔎 Search the docs">
+    
+                        <div class="search-results">
+                            <div class="search-results__items"></div>
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;jp-lang&#x2F;">日本語環境にする</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2021-06-07</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>日本語環境にする</p>
+<span id="continue-reading"></span>
+<p>1.日本語関連のパッケージをインストールします。</p>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">root@dlp:~#</span><span style="color:#c0c5ce;"> apt</span><span style="color:#bf616a;"> -y</span><span style="color:#c0c5ce;"> install language-pack-ja-base language-pack-ja ibus-mozc
+
+</span></code></pre>
+<ol start="2">
+<li>システムの文字セットを日本語に変更します。</li>
+</ol>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">root@dlp:~#</span><span style="color:#c0c5ce;"> localectl set-locale LANG=ja_JP.UTF-8 LANGUAGE=&quot;</span><span style="color:#a3be8c;">ja_JP:ja</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#bf616a;">root@dlp:~#</span><span style="color:#c0c5ce;"> source /etc/default/locale
+</span><span style="color:#bf616a;">root@dlp:~#</span><span style="color:#c0c5ce;"> echo $</span><span style="color:#bf616a;">LANG
+ja_JP.UTF-8     </span><span style="color:#65737e;"># 変更された
+</span><span style="color:#bf616a;">root@dlp:~#</span><span style="color:#c0c5ce;"> passwd     </span><span style="color:#65737e;"># 試しに何かしてみる
+</span><span style="color:#c0c5ce;">新しいUNIXパスワードを入力してください:     </span><span style="color:#65737e;"># 日本語になっている
+</span></code></pre>
+<p><br/><br/></p>
+<hr />
+<p>Debian</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">$ sudo apt-get install locales
+$ sudo vim /etc/locale.gen
+ja_JP.UTF-8の行のコメントを解除
+$ sudo locale-gen
+$ sudo update-locale LANG=ja_JP.UTF-8
+</span></code></pre>
+<p>Ubuntu</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">$ sudo apt install language-pack-ja
+$ sudo update-locale LANG=ja_JP.UTF-8
+</span></code></pre>
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags&#x2F;linux&#x2F;">#linux</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;laravel&#x2F;">‹ laravel</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;fuelphp&#x2F;">fuelphp ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;even.js" ></script>
+
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search.js"></script>
+
+
+
+      
+    </body>
+
+</html>

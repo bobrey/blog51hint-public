@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title> - ssh keys加密算法ed25519和rsa的生成以及比较</title>
+
+      
+
+      
+          <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script> -->
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;slideout.min.js"></script>
+          
+      
+
+      
+          <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;site.css">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="/" class="logo">IT技术分享</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                            Tags
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                            About
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo"><a href="https:&#x2F;&#x2F;blog.51hint.com">IT技术分享</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+
+                    <div class="search-container">
+                        <input id="search" type="search" placeholder="🔎 Search the docs">
+    
+                        <div class="search-results">
+                            <div class="search-results__items"></div>
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;ssh-key&#x2F;">ssh keys加密算法ed25519和rsa的生成以及比较</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2021-06-07</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>ed25519加密解密很快,生成时间短而且安全性更高,
+rsa则加密解密稍慢,生成时间长,安全性没有ed25519高,
+只是rsa基本都是默认,所以用的人更多,
+但是建议转换为ed25519,网站软件现在基本都支持了.</p>
+<span id="continue-reading"></span><pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">ssh-keygen -t</span><span style="color:#c0c5ce;"> ed25519</span><span style="color:#bf616a;"> -C </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">XXX</span><span style="color:#c0c5ce;">&quot; (XXX为标记,随便起个名称)
+(</span><span style="color:#bf616a;">回车,返回结果</span><span style="color:#c0c5ce;">)
+</span><span style="color:#bf616a;">Generating</span><span style="color:#c0c5ce;"> public/private ed25519 key pair.
+</span><span style="color:#bf616a;">Enter</span><span style="color:#c0c5ce;"> file in which to save the key (/home/xxx/.ssh/id_ed25519)</span><span style="color:#96b5b4;">:</span><span style="color:#c0c5ce;"> (文件保存位置,一般默认就好)
+(</span><span style="color:#bf616a;">回车,返回结果</span><span style="color:#c0c5ce;">)
+</span><span style="color:#bf616a;">Enter</span><span style="color:#c0c5ce;"> passphrase (empty for no passphrase)</span><span style="color:#96b5b4;">:</span><span style="color:#c0c5ce;"> (密码,如果想使用时不输密码,留空即可)
+(</span><span style="color:#bf616a;">回车,返回结果</span><span style="color:#c0c5ce;">)
+</span><span style="color:#bf616a;">Enter</span><span style="color:#c0c5ce;"> same passphrase again: (再次确认密码,留空的还是直接回车)
+(</span><span style="color:#bf616a;">回车,返回结果</span><span style="color:#c0c5ce;">)
+</span><span style="color:#bf616a;">Your</span><span style="color:#c0c5ce;"> identification has been saved in /home/xxx/.ssh/id_ed25519.
+</span><span style="color:#bf616a;">Your</span><span style="color:#c0c5ce;"> public key has been saved in /home/xxx/.ssh/id_ed25519.pub.
+</span><span style="color:#bf616a;">The</span><span style="color:#c0c5ce;"> key fingerprint is:
+</span><span style="color:#bf616a;">SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span style="color:#c0c5ce;"> XXX(这几位是最上面填写的名称,在在公钥最后显示)
+</span><span style="color:#bf616a;">The</span><span style="color:#c0c5ce;"> key&#39;</span><span style="color:#a3be8c;">s randomart image is:(返回的随即生成图形)
++--[ED25519 256]--+
+|                 |
+|                 |
+|                 |
+|                 |
+| xxxxxxxxxxxxxxx |
+|ooooooooooooo    |
+|                 |
+|                 |
+|                 |
++----[SHA256]-----+
+</span></code></pre>
+<p>这样ed25519算法的密钥就生成完毕了, id_ed25519.pub是公钥,粘贴到github之类的网站即可,id_ed25519是私钥,一定要保存好,且不能随便给他人</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags&#x2F;linux&#x2F;">#linux</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;theme-overview&#x2F;">‹ Theme Overview</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;matrix&#x2F;">Riot&amp;Synapse 搭建局域网im服务 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;even.js" ></script>
+
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search.js"></script>
+
+
+
+      
+    </body>
+
+</html>

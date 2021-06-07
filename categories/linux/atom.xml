@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - linux</title>
+	<link href="https://blog.51hint.com/categories/linux/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.51hint.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-07T00:00:00+00:00</updated>
+	<id>https://blog.51hint.com/categories/linux/atom.xml</id>
+	<entry xml:lang="en">
+		<title>ansible</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/ansible/" type="text/html"/>
+		<id>https://blog.51hint.com/ansible/</id>
+		<content type="html">&lt;p&gt;Ansible 自动化运营。&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;anoyi.com&#x2F;p&#x2F;62388a4fcbc6&quot;&gt;1 小时学会 Ansible&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;showme.codes&#x2F;2019-09-19&#x2F;understand-ansible&#x2F;&quot;&gt;这样理解Ansible更容易&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;linuxhint.com&#x2F;set_mysql_root_password_ansible&#x2F;&quot;&gt;How to Set MySQL Root Password using Ansible&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zhanglianghhh&#x2F;ansible-example-lnmp&quot;&gt;ansible lnmp&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>fuelphp</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/fuelphp/" type="text/html"/>
+		<id>https://blog.51hint.com/fuelphp/</id>
+		<content type="html">&lt;p&gt;Fuelphp 学习教程及其参考网站&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;qiita.com&#x2F;kazukichi&#x2F;items&#x2F;2a6e242091c5f485b976&quot;&gt;ざっくりFuelPHPの使い方&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.bot.vc&#x2F;2013&#x2F;01&#x2F;fuelphp&#x2F;&quot;&gt;PHPの高速フレームワーク FuelPHP を試してみました。入門版サンプルと、MongoDBの設定方法まとめ&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;curecode.jp&#x2F;tech&#x2F;fuelphp-simpleauth-error-on-mysql-sql_mode-strict&#x2F;&quot;&gt;FuelPHP SimpleAuth の対象テーブルで updated_at を DATETIME 型にすると発生する SQL エラーの回避方法&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cnblogs.com&#x2F;gaoBlog&#x2F;p&#x2F;12290315.html&quot;&gt;fuelphp获取开发环境&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.momouta.org&#x2F;b&#x2F;mloge&#x2F;2014&#x2F;12&#x2F;06&#x2F;qnap%E3%81%ABja_jp%E3%83%AD%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%9F&#x2F;&quot;&gt;QNAPにja_JPロケールを導入した&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>日本語環境にする</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/jp-lang/" type="text/html"/>
+		<id>https://blog.51hint.com/jp-lang/</id>
+		<content type="html">&lt;p&gt;日本語環境にする&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;1.日本語関連のパッケージをインストールします。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; apt&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; install language-pack-ja-base language-pack-ja ibus-mozc
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;システムの文字セットを日本語に変更します。&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; localectl set-locale LANG=ja_JP.UTF-8 LANGUAGE=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ja_JP:ja&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; source &#x2F;etc&#x2F;default&#x2F;locale
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; echo $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LANG
+ja_JP.UTF-8     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 変更された
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;root@dlp:~#&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; passwd     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 試しに何かしてみる
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;新しいUNIXパスワードを入力してください:     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# 日本語になっている
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Debian&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt-get install locales
+$ sudo vim &#x2F;etc&#x2F;locale.gen
+ja_JP.UTF-8の行のコメントを解除
+$ sudo locale-gen
+$ sudo update-locale LANG=ja_JP.UTF-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ubuntu&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ sudo apt install language-pack-ja
+$ sudo update-locale LANG=ja_JP.UTF-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>laravel</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/laravel/" type="text/html"/>
+		<id>https://blog.51hint.com/laravel/</id>
+		<content type="html">&lt;p&gt;Laravel 学习教程及其参考网站&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&#x2F;issues&#x2F;16&quot;&gt;2017 版 Laravel 系列入门教程（一）【最适合中国人的 Laravel 教程】&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shishido.dev&#x2F;laravel6-adminlte&#x2F;&quot;&gt;Laravel6的Laravel-Admin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pensuke.work&#x2F;posts&#x2F;laradock-admin-crm&quot;&gt;laravel-admin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tac-blog.tech&#x2F;index.php&#x2F;2018&#x2F;09&#x2F;29&#x2F;laravel-admin-add-crud&#x2F;&quot;&gt;laravel-admin-curd&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shishido.dev&#x2F;laravel-paginator&#x2F;&quot;&gt;Laravelで独自のページネーターを作成する&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leantony.github.io&#x2F;laravel-grid&#x2F;&quot;&gt;laravel grid&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;lw545034502&#x2F;article&#x2F;details&#x2F;85061475&quot;&gt;laravel 定时任务&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.capilano-fw.com&#x2F;?p=1215&quot;&gt;Laravel】郵便番号で住所検索する&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.itsolutionstuff.com&#x2F;post&#x2F;laravel-6-file-upload-tutorial-exampleexample.html&quot;&gt;Laravel 6 File Upload&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;cjs5202001&#x2F;article&#x2F;details&#x2F;80641281&quot;&gt;Laravel 登录验证，md5验证，自定义验证，自定义表&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>mac上运行k3s</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/mac-k3s/" type="text/html"/>
+		<id>https://blog.51hint.com/mac-k3s/</id>
+		<content type="html">&lt;p&gt;k3s是由Rancher Labs于今年年初发布的一款开源、极轻量的Kubernetes发行版，完美适用于在资源有限的环境中运行Kubernetes&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;首先我们使用brew（一个软件包管理工具）安装Multipass。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;brew search multipass
+brew cask install multipass
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;现在使用Multipass来创建一个VM：需要1GB内存和5GB磁盘&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;multipass launch --name k3s --mem 1G --disk 5G
+Launched: k3s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;等待VM创建，然后为VM启动一个shell&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;multipass shell k3s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;接着运行命令curl -sfL https:&#x2F;&#x2F;get.k3s.io | sh – 来安装k3s&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[INFO]  Finding latest release[INFO]  Using v0.2.0 as release
+[INFO]  Downloading hash https:&#x2F;&#x2F;github.com&#x2F;rancher&#x2F;k3s&#x2F;releases&#x2F;download&#x2F;v0.2.0&#x2F;sha256sum-amd64.txt
+[INFO]  Downloading binary https:&#x2F;&#x2F;github.com&#x2F;rancher&#x2F;k3s&#x2F;releases&#x2F;download&#x2F;v0.2.0&#x2F;k3s[INFO]  Verifying binary download
+[INFO]  Installing k3s to &#x2F;usr&#x2F;local&#x2F;bin&#x2F;k3s
+[INFO]  Creating &#x2F;usr&#x2F;local&#x2F;bin&#x2F;kubectl symlink to k3s[INFO]  Creating &#x2F;usr&#x2F;local&#x2F;bin&#x2F;crictl symlink to k3s
+[INFO]  Creating uninstall script &#x2F;usr&#x2F;local&#x2F;bin&#x2F;k3s-uninstall.sh[INFO]  systemd: Creating environment file &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;k3s.service.env
+[INFO]  systemd: Creating service file &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;k3s.service
+[INFO]  systemd: Enabling k3s unitCreated symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;multi-user.target.wants&#x2F;k3s.service → &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;k3s.service.
+[INFO]  systemd: Starting k3s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;安装好k3s之后，在mac上运行它，使用kubectl验证它。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;multipass@k3s:~$ kubectl get nodes
+NAME   STATUS   ROLES    AGE     VERSION
+k3s    Ready    &amp;lt;none&amp;gt;   7m14s   v1.13.4-k3s.1
+
+multipass@k3s:~$ kubectl get pods --all-namespaces
+kube-system   coredns-7748f7f6df-dnsp2         1&#x2F;1     Running     0          7m15s
+kube-system   helm-install-traefik-nqvg8       0&#x2F;1     Completed   0          7m15s
+kube-system   svclb-traefik-6659944cc7-f6rdc   2&#x2F;2     Running     0          6m53s
+kube-system   traefik-5cc8776646-99c66         1&#x2F;1     Running     0          6m53s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;大功告成！现在我们已经可以在mac上运行k3s了。&lt;&#x2F;p&gt;
+&lt;br&#x2F;&gt;
+---
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s?__biz=MzIyMTUwMDMyOQ==&amp;amp;mid=2247491899&amp;amp;idx=1&amp;amp;sn=3ed1aad7fee70ff4e97eb0d63bf952e8&amp;amp;chksm=e83967fddf4eeeebac76960fa018123c612b85c6a767f53ea98b9ae5b38f1b5cd137cc7bcf1f&amp;amp;scene=21#wechat_redirect&quot;&gt;Rancher 2.2+K3s集成部署实践教程&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Riot&amp;Synapse 搭建局域网im服务</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/matrix/" type="text/html"/>
+		<id>https://blog.51hint.com/matrix/</id>
+		<content type="html">&lt;p&gt;&lt;code&gt;Riot im&lt;&#x2F;code&gt; 是一个以 &lt;code&gt;Matrix&lt;&#x2F;code&gt; 协议为基础的开源软件，使用 &lt;code&gt;React&lt;&#x2F;code&gt; 开发，有 &lt;code&gt;android&lt;&#x2F;code&gt;、&lt;code&gt;ios&lt;&#x2F;code&gt;、&lt;code&gt;mac&lt;&#x2F;code&gt;、&lt;code&gt;windows&lt;&#x2F;code&gt;、&lt;code&gt;linux&lt;&#x2F;code&gt;多平台客户端，支持文本、markdown、文件、视音频等传输。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Riot im&lt;&#x2F;code&gt; 只需要服务器提供注册能力就可以与在不同服务器注册的用户进行通信，并且支持私信端到端加密，因此大受隐私爱好者喜爱。&lt;&#x2F;p&gt;
+&lt;p&gt;本篇主要介绍如何使用 &lt;code&gt;docker&lt;&#x2F;code&gt; 来搭建一个 &lt;code&gt;synapse&lt;&#x2F;code&gt; 服务器供 &lt;code&gt;Riot im&lt;&#x2F;code&gt; 使用。&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;获取最新镜像&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;docker pull matrixdotorg&#x2F;synapse
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;生成配置文件&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;docker run -it --rm \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    --mount type=volume,src=synapse-data,dst=&#x2F;data \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    -e SYNAPSE_SERVER_NAME=your-domain \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    -e SYNAPSE_REPORT_STATS=yes \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    matrixdotorg&#x2F;synapse:latest generate
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;修改配置文件
+默认关闭了注册功能的&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;find &#x2F; -name homeserver.yaml
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;然后，更新配置文件中：registration_enable 为 true。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;启动镜像&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;docker run -d --restart=always --name synapse \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    --mount type=volume,src=synapse-data,dst=&#x2F;data \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    -p 8008:8008 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    matrixdotorg&#x2F;synapse:latest
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器地址即为: your-domain&#x27;8008&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Matrix pdf 介绍&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrixim.cc&#x2F;sfd2017-matrix.pdf&quot;&gt;https:&#x2F;&#x2F;matrixim.cc&#x2F;sfd2017-matrix.pdf&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;https:&#x2F;&#x2F;matrixim.cc&#x2F;sfd2017-matrix.pdf&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>ssh keys加密算法ed25519和rsa的生成以及比较</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/ssh-key/" type="text/html"/>
+		<id>https://blog.51hint.com/ssh-key/</id>
+		<content type="html">&lt;p&gt;ed25519加密解密很快,生成时间短而且安全性更高,
+rsa则加密解密稍慢,生成时间长,安全性没有ed25519高,
+只是rsa基本都是默认,所以用的人更多,
+但是建议转换为ed25519,网站软件现在基本都支持了.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ssh-keygen -t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; ed25519&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -C &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;XXX&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot; (XXX为标记,随便起个名称)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Generating&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; public&#x2F;private ed25519 key pair.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Enter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; file in which to save the key (&#x2F;home&#x2F;xxx&#x2F;.ssh&#x2F;id_ed25519)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; (文件保存位置,一般默认就好)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Enter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; passphrase (empty for no passphrase)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; (密码,如果想使用时不输密码,留空即可)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Enter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; same passphrase again: (再次确认密码,留空的还是直接回车)
+(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;回车,返回结果&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; identification has been saved in &#x2F;home&#x2F;xxx&#x2F;.ssh&#x2F;id_ed25519.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; public key has been saved in &#x2F;home&#x2F;xxx&#x2F;.ssh&#x2F;id_ed25519.pub.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;The&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; key fingerprint is:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; XXX(这几位是最上面填写的名称,在在公钥最后显示)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;The&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; key&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;s randomart image is:(返回的随即生成图形)
++--[ED25519 256]--+
+|                 |
+|                 |
+|                 |
+|                 |
+| xxxxxxxxxxxxxxx |
+|ooooooooooooo    |
+|                 |
+|                 |
+|                 |
++----[SHA256]-----+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;这样ed25519算法的密钥就生成完毕了, id_ed25519.pub是公钥,粘贴到github之类的网站即可,id_ed25519是私钥,一定要保存好,且不能随便给他人&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

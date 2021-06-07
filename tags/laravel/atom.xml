@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - laravel</title>
+	<link href="https://blog.51hint.com/tags/laravel/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.51hint.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-07T00:00:00+00:00</updated>
+	<id>https://blog.51hint.com/tags/laravel/atom.xml</id>
+	<entry xml:lang="en">
+		<title>laravel</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/laravel/" type="text/html"/>
+		<id>https://blog.51hint.com/laravel/</id>
+		<content type="html">&lt;p&gt;Laravel 学习教程及其参考网站&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&#x2F;issues&#x2F;16&quot;&gt;2017 版 Laravel 系列入门教程（一）【最适合中国人的 Laravel 教程】&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shishido.dev&#x2F;laravel6-adminlte&#x2F;&quot;&gt;Laravel6的Laravel-Admin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pensuke.work&#x2F;posts&#x2F;laradock-admin-crm&quot;&gt;laravel-admin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tac-blog.tech&#x2F;index.php&#x2F;2018&#x2F;09&#x2F;29&#x2F;laravel-admin-add-crud&#x2F;&quot;&gt;laravel-admin-curd&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shishido.dev&#x2F;laravel-paginator&#x2F;&quot;&gt;Laravelで独自のページネーターを作成する&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leantony.github.io&#x2F;laravel-grid&#x2F;&quot;&gt;laravel grid&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;lw545034502&#x2F;article&#x2F;details&#x2F;85061475&quot;&gt;laravel 定时任务&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.capilano-fw.com&#x2F;?p=1215&quot;&gt;Laravel】郵便番号で住所検索する&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.itsolutionstuff.com&#x2F;post&#x2F;laravel-6-file-upload-tutorial-exampleexample.html&quot;&gt;Laravel 6 File Upload&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;cjs5202001&#x2F;article&#x2F;details&#x2F;80641281&quot;&gt;Laravel 登录验证，md5验证，自定义验证，自定义表&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

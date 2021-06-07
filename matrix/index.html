@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title> - Riot&amp;Synapse 搭建局域网im服务</title>
+
+      
+
+      
+          <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script> -->
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;slideout.min.js"></script>
+          
+      
+
+      
+          <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;site.css">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="/" class="logo">IT技术分享</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                            Tags
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                            About
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo"><a href="https:&#x2F;&#x2F;blog.51hint.com">IT技术分享</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+
+                    <div class="search-container">
+                        <input id="search" type="search" placeholder="🔎 Search the docs">
+    
+                        <div class="search-results">
+                            <div class="search-results__items"></div>
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;matrix&#x2F;">Riot&amp;Synapse 搭建局域网im服务</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2021-06-07</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p><code>Riot im</code> 是一个以 <code>Matrix</code> 协议为基础的开源软件，使用 <code>React</code> 开发，有 <code>android</code>、<code>ios</code>、<code>mac</code>、<code>windows</code>、<code>linux</code>多平台客户端，支持文本、markdown、文件、视音频等传输。</p>
+<p><code>Riot im</code> 只需要服务器提供注册能力就可以与在不同服务器注册的用户进行通信，并且支持私信端到端加密，因此大受隐私爱好者喜爱。</p>
+<p>本篇主要介绍如何使用 <code>docker</code> 来搭建一个 <code>synapse</code> 服务器供 <code>Riot im</code> 使用。</p>
+<span id="continue-reading"></span>
+<ul>
+<li>
+<p>获取最新镜像</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">docker pull matrixdotorg/synapse
+</span></code></pre></li>
+<li>
+<p>生成配置文件</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">docker run -it --rm \
+</span><span style="color:#c0c5ce;">    --mount type=volume,src=synapse-data,dst=/data \
+</span><span style="color:#c0c5ce;">    -e SYNAPSE_SERVER_NAME=your-domain \
+</span><span style="color:#c0c5ce;">    -e SYNAPSE_REPORT_STATS=yes \
+</span><span style="color:#c0c5ce;">    matrixdotorg/synapse:latest generate
+</span></code></pre></li>
+<li>
+<p>修改配置文件
+默认关闭了注册功能的</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">find / -name homeserver.yaml
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">然后，更新配置文件中：registration_enable 为 true。
+</span></code></pre></li>
+<li>
+<p>启动镜像</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">docker run -d --restart=always --name synapse \
+</span><span style="color:#c0c5ce;">    --mount type=volume,src=synapse-data,dst=/data \
+</span><span style="color:#c0c5ce;">    -p 8008:8008 \
+</span><span style="color:#c0c5ce;">    matrixdotorg/synapse:latest
+</span></code></pre></li>
+<li>
+<p>服务器地址即为: your-domain'8008</p>
+</li>
+</ul>
+<p>Matrix pdf 介绍</p>
+<p><a href="https://matrixim.cc/sfd2017-matrix.pdf">https://matrixim.cc/sfd2017-matrix.pdf</a></p>
+<p>https://matrixim.cc/sfd2017-matrix.pdf</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags&#x2F;matrix&#x2F;">#matrix</a>
+                    
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags&#x2F;riot&#x2F;">#riot</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;ssh-key&#x2F;">‹ ssh keys加密算法ed25519和rsa的生成以及比较</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;mac-k3s&#x2F;">mac上运行k3s ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;even.js" ></script>
+
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search.js"></script>
+
+
+
+      
+    </body>
+
+</html>

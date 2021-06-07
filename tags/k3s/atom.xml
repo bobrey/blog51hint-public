@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - k3s</title>
+	<link href="https://blog.51hint.com/tags/k3s/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.51hint.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-07T00:00:00+00:00</updated>
+	<id>https://blog.51hint.com/tags/k3s/atom.xml</id>
+	<entry xml:lang="en">
+		<title>mac上运行k3s</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/mac-k3s/" type="text/html"/>
+		<id>https://blog.51hint.com/mac-k3s/</id>
+		<content type="html">&lt;p&gt;k3s是由Rancher Labs于今年年初发布的一款开源、极轻量的Kubernetes发行版，完美适用于在资源有限的环境中运行Kubernetes&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;首先我们使用brew（一个软件包管理工具）安装Multipass。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;brew search multipass
+brew cask install multipass
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;现在使用Multipass来创建一个VM：需要1GB内存和5GB磁盘&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;multipass launch --name k3s --mem 1G --disk 5G
+Launched: k3s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;等待VM创建，然后为VM启动一个shell&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;multipass shell k3s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;接着运行命令curl -sfL https:&#x2F;&#x2F;get.k3s.io | sh – 来安装k3s&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[INFO]  Finding latest release[INFO]  Using v0.2.0 as release
+[INFO]  Downloading hash https:&#x2F;&#x2F;github.com&#x2F;rancher&#x2F;k3s&#x2F;releases&#x2F;download&#x2F;v0.2.0&#x2F;sha256sum-amd64.txt
+[INFO]  Downloading binary https:&#x2F;&#x2F;github.com&#x2F;rancher&#x2F;k3s&#x2F;releases&#x2F;download&#x2F;v0.2.0&#x2F;k3s[INFO]  Verifying binary download
+[INFO]  Installing k3s to &#x2F;usr&#x2F;local&#x2F;bin&#x2F;k3s
+[INFO]  Creating &#x2F;usr&#x2F;local&#x2F;bin&#x2F;kubectl symlink to k3s[INFO]  Creating &#x2F;usr&#x2F;local&#x2F;bin&#x2F;crictl symlink to k3s
+[INFO]  Creating uninstall script &#x2F;usr&#x2F;local&#x2F;bin&#x2F;k3s-uninstall.sh[INFO]  systemd: Creating environment file &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;k3s.service.env
+[INFO]  systemd: Creating service file &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;k3s.service
+[INFO]  systemd: Enabling k3s unitCreated symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;multi-user.target.wants&#x2F;k3s.service → &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;k3s.service.
+[INFO]  systemd: Starting k3s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;安装好k3s之后，在mac上运行它，使用kubectl验证它。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;multipass@k3s:~$ kubectl get nodes
+NAME   STATUS   ROLES    AGE     VERSION
+k3s    Ready    &amp;lt;none&amp;gt;   7m14s   v1.13.4-k3s.1
+
+multipass@k3s:~$ kubectl get pods --all-namespaces
+kube-system   coredns-7748f7f6df-dnsp2         1&#x2F;1     Running     0          7m15s
+kube-system   helm-install-traefik-nqvg8       0&#x2F;1     Completed   0          7m15s
+kube-system   svclb-traefik-6659944cc7-f6rdc   2&#x2F;2     Running     0          6m53s
+kube-system   traefik-5cc8776646-99c66         1&#x2F;1     Running     0          6m53s
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;大功告成！现在我们已经可以在mac上运行k3s了。&lt;&#x2F;p&gt;
+&lt;br&#x2F;&gt;
+---
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s?__biz=MzIyMTUwMDMyOQ==&amp;amp;mid=2247491899&amp;amp;idx=1&amp;amp;sn=3ed1aad7fee70ff4e97eb0d63bf952e8&amp;amp;chksm=e83967fddf4eeeebac76960fa018123c612b85c6a767f53ea98b9ae5b38f1b5cd137cc7bcf1f&amp;amp;scene=21#wechat_redirect&quot;&gt;Rancher 2.2+K3s集成部署实践教程&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

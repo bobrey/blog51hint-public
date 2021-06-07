@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - matrix</title>
+	<link href="https://blog.51hint.com/tags/matrix/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.51hint.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-07T00:00:00+00:00</updated>
+	<id>https://blog.51hint.com/tags/matrix/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Riot&amp;Synapse 搭建局域网im服务</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/matrix/" type="text/html"/>
+		<id>https://blog.51hint.com/matrix/</id>
+		<content type="html">&lt;p&gt;&lt;code&gt;Riot im&lt;&#x2F;code&gt; 是一个以 &lt;code&gt;Matrix&lt;&#x2F;code&gt; 协议为基础的开源软件，使用 &lt;code&gt;React&lt;&#x2F;code&gt; 开发，有 &lt;code&gt;android&lt;&#x2F;code&gt;、&lt;code&gt;ios&lt;&#x2F;code&gt;、&lt;code&gt;mac&lt;&#x2F;code&gt;、&lt;code&gt;windows&lt;&#x2F;code&gt;、&lt;code&gt;linux&lt;&#x2F;code&gt;多平台客户端，支持文本、markdown、文件、视音频等传输。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Riot im&lt;&#x2F;code&gt; 只需要服务器提供注册能力就可以与在不同服务器注册的用户进行通信，并且支持私信端到端加密，因此大受隐私爱好者喜爱。&lt;&#x2F;p&gt;
+&lt;p&gt;本篇主要介绍如何使用 &lt;code&gt;docker&lt;&#x2F;code&gt; 来搭建一个 &lt;code&gt;synapse&lt;&#x2F;code&gt; 服务器供 &lt;code&gt;Riot im&lt;&#x2F;code&gt; 使用。&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;获取最新镜像&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;docker pull matrixdotorg&#x2F;synapse
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;生成配置文件&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;docker run -it --rm \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    --mount type=volume,src=synapse-data,dst=&#x2F;data \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    -e SYNAPSE_SERVER_NAME=your-domain \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    -e SYNAPSE_REPORT_STATS=yes \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    matrixdotorg&#x2F;synapse:latest generate
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;修改配置文件
+默认关闭了注册功能的&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;find &#x2F; -name homeserver.yaml
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;然后，更新配置文件中：registration_enable 为 true。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;启动镜像&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;docker run -d --restart=always --name synapse \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    --mount type=volume,src=synapse-data,dst=&#x2F;data \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    -p 8008:8008 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;    matrixdotorg&#x2F;synapse:latest
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;服务器地址即为: your-domain&#x27;8008&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Matrix pdf 介绍&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;matrixim.cc&#x2F;sfd2017-matrix.pdf&quot;&gt;https:&#x2F;&#x2F;matrixim.cc&#x2F;sfd2017-matrix.pdf&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;https:&#x2F;&#x2F;matrixim.cc&#x2F;sfd2017-matrix.pdf&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

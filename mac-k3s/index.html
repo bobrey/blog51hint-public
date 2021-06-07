@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title> - mac上运行k3s</title>
+
+      
+
+      
+          <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script> -->
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;slideout.min.js"></script>
+          
+      
+
+      
+          <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;site.css">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="/" class="logo">IT技术分享</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                            Tags
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                            About
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo"><a href="https:&#x2F;&#x2F;blog.51hint.com">IT技术分享</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+
+                    <div class="search-container">
+                        <input id="search" type="search" placeholder="🔎 Search the docs">
+    
+                        <div class="search-results">
+                            <div class="search-results__items"></div>
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;mac-k3s&#x2F;">mac上运行k3s</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2021-06-07</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>k3s是由Rancher Labs于今年年初发布的一款开源、极轻量的Kubernetes发行版，完美适用于在资源有限的环境中运行Kubernetes</p>
+<span id="continue-reading"></span>
+<p>首先我们使用brew（一个软件包管理工具）安装Multipass。</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">brew search multipass
+brew cask install multipass
+</span></code></pre>
+<p>现在使用Multipass来创建一个VM：需要1GB内存和5GB磁盘</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">multipass launch --name k3s --mem 1G --disk 5G
+Launched: k3s
+</span></code></pre>
+<p>等待VM创建，然后为VM启动一个shell</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">multipass shell k3s
+</span></code></pre>
+<p>接着运行命令curl -sfL https://get.k3s.io | sh – 来安装k3s</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">[INFO]  Finding latest release[INFO]  Using v0.2.0 as release
+[INFO]  Downloading hash https://github.com/rancher/k3s/releases/download/v0.2.0/sha256sum-amd64.txt
+[INFO]  Downloading binary https://github.com/rancher/k3s/releases/download/v0.2.0/k3s[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh[INFO]  systemd: Creating environment file /etc/systemd/system/k3s.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service
+[INFO]  systemd: Enabling k3s unitCreated symlink /etc/systemd/system/multi-user.target.wants/k3s.service → /etc/systemd/system/k3s.service.
+[INFO]  systemd: Starting k3s
+</span></code></pre>
+<p>安装好k3s之后，在mac上运行它，使用kubectl验证它。</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">multipass@k3s:~$ kubectl get nodes
+NAME   STATUS   ROLES    AGE     VERSION
+k3s    Ready    &lt;none&gt;   7m14s   v1.13.4-k3s.1
+
+multipass@k3s:~$ kubectl get pods --all-namespaces
+kube-system   coredns-7748f7f6df-dnsp2         1/1     Running     0          7m15s
+kube-system   helm-install-traefik-nqvg8       0/1     Completed   0          7m15s
+kube-system   svclb-traefik-6659944cc7-f6rdc   2/2     Running     0          6m53s
+kube-system   traefik-5cc8776646-99c66         1/1     Running     0          6m53s
+</span></code></pre>
+<p>大功告成！现在我们已经可以在mac上运行k3s了。</p>
+<br/>
+---
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIyMTUwMDMyOQ==&amp;mid=2247491899&amp;idx=1&amp;sn=3ed1aad7fee70ff4e97eb0d63bf952e8&amp;chksm=e83967fddf4eeeebac76960fa018123c612b85c6a767f53ea98b9ae5b38f1b5cd137cc7bcf1f&amp;scene=21#wechat_redirect">Rancher 2.2+K3s集成部署实践教程</a></p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags&#x2F;k3s&#x2F;">#k3s</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;matrix&#x2F;">‹ Riot&amp;Synapse 搭建局域网im服务</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;laravel&#x2F;">laravel ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;even.js" ></script>
+
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search.js"></script>
+
+
+
+      
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - php</title>
+	<link href="https://blog.51hint.com/tags/php/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.51hint.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-07T00:00:00+00:00</updated>
+	<id>https://blog.51hint.com/tags/php/atom.xml</id>
+	<entry xml:lang="en">
+		<title>fuelphp</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/fuelphp/" type="text/html"/>
+		<id>https://blog.51hint.com/fuelphp/</id>
+		<content type="html">&lt;p&gt;Fuelphp 学习教程及其参考网站&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;qiita.com&#x2F;kazukichi&#x2F;items&#x2F;2a6e242091c5f485b976&quot;&gt;ざっくりFuelPHPの使い方&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;blog.bot.vc&#x2F;2013&#x2F;01&#x2F;fuelphp&#x2F;&quot;&gt;PHPの高速フレームワーク FuelPHP を試してみました。入門版サンプルと、MongoDBの設定方法まとめ&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;curecode.jp&#x2F;tech&#x2F;fuelphp-simpleauth-error-on-mysql-sql_mode-strict&#x2F;&quot;&gt;FuelPHP SimpleAuth の対象テーブルで updated_at を DATETIME 型にすると発生する SQL エラーの回避方法&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cnblogs.com&#x2F;gaoBlog&#x2F;p&#x2F;12290315.html&quot;&gt;fuelphp获取开发环境&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.momouta.org&#x2F;b&#x2F;mloge&#x2F;2014&#x2F;12&#x2F;06&#x2F;qnap%E3%81%ABja_jp%E3%83%AD%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%9F&#x2F;&quot;&gt;QNAPにja_JPロケールを導入した&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>laravel</title>
+		<published>2021-06-07T00:00:00+00:00</published>
+		<updated>2021-06-07T00:00:00+00:00</updated>
+		<link href="https://blog.51hint.com/laravel/" type="text/html"/>
+		<id>https://blog.51hint.com/laravel/</id>
+		<content type="html">&lt;p&gt;Laravel 学习教程及其参考网站&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&#x2F;issues&#x2F;16&quot;&gt;2017 版 Laravel 系列入门教程（一）【最适合中国人的 Laravel 教程】&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;johnlui&#x2F;Learn-Laravel-5&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shishido.dev&#x2F;laravel6-adminlte&#x2F;&quot;&gt;Laravel6的Laravel-Admin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pensuke.work&#x2F;posts&#x2F;laradock-admin-crm&quot;&gt;laravel-admin&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tac-blog.tech&#x2F;index.php&#x2F;2018&#x2F;09&#x2F;29&#x2F;laravel-admin-add-crud&#x2F;&quot;&gt;laravel-admin-curd&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;shishido.dev&#x2F;laravel-paginator&#x2F;&quot;&gt;Laravelで独自のページネーターを作成する&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leantony.github.io&#x2F;laravel-grid&#x2F;&quot;&gt;laravel grid&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;lw545034502&#x2F;article&#x2F;details&#x2F;85061475&quot;&gt;laravel 定时任务&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.capilano-fw.com&#x2F;?p=1215&quot;&gt;Laravel】郵便番号で住所検索する&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.itsolutionstuff.com&#x2F;post&#x2F;laravel-6-file-upload-tutorial-exampleexample.html&quot;&gt;Laravel 6 File Upload&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;cjs5202001&#x2F;article&#x2F;details&#x2F;80641281&quot;&gt;Laravel 登录验证，md5验证，自定义验证，自定义表&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
