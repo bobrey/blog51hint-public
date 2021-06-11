@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title> - 更新源</title>
+
+      
+
+      
+          <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script> -->
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;slideout.min.js"></script>
+          
+      
+
+      
+          <link rel="stylesheet" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;site.css">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="/" class="logo">IT技术分享</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                            Tags
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                            About
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo"><a href="https:&#x2F;&#x2F;blog.51hint.com">IT技术分享</a></div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;categories">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags">
+                                    Tags
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;about">
+                                    About
+                                </a>
+                            </li>
+                        
+                    </ul>
+
+                    <div class="search-container">
+                        <input id="search" type="search" placeholder="🔎 Search the docs">
+    
+                        <div class="search-results">
+                            <div class="search-results__items"></div>
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;mirros&#x2F;">更新源</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2021-06-11</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>更新centos、Debian、Ubuntu的镜像源;以及设置静态ip地址</p>
+<span id="continue-reading"></span>
+<ul>
+<li>
+<p>Cetnos</p>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cp -a</span><span style="color:#c0c5ce;"> /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+</span><span style="color:#bf616a;">wget -O</span><span style="color:#c0c5ce;"> /etc/yum.repos.d/CentOS-Base.repo https://repo.huaweicloud.com/repository/conf/CentOS-7-reg.repo
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#bf616a;">yum</span><span style="color:#c0c5ce;"> clean all
+</span><span style="color:#bf616a;">yum</span><span style="color:#c0c5ce;"> makecache
+</span></code></pre></li>
+<li>
+<p>Debian</p>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cp -a</span><span style="color:#c0c5ce;"> /etc/apt/sources.list /etc/apt/sources.list.bak
+</span><span style="color:#bf616a;">sed -i </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">s@http://ftp.debian.org@https://repo.huaweicloud.com@g</span><span style="color:#c0c5ce;">&quot; /etc/apt/sources.list
+</span><span style="color:#bf616a;">sed -i </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">s@http://security.debian.org@https://repo.huaweicloud.com@g</span><span style="color:#c0c5ce;">&quot; /etc/apt/sources.list
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#bf616a;">apt-get</span><span style="color:#c0c5ce;"> install apt-transport-https ca-certificates
+</span><span style="color:#bf616a;">apt-get</span><span style="color:#c0c5ce;"> update
+</span></code></pre></li>
+<li>
+<p>Ubuntu</p>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> cp</span><span style="color:#bf616a;"> -a</span><span style="color:#c0c5ce;"> /etc/apt/sources.list /etc/apt/sources.list.bak
+</span><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> sed</span><span style="color:#bf616a;"> -i </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g</span><span style="color:#c0c5ce;">&quot; /etc/apt/sources.list
+</span><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> sed</span><span style="color:#bf616a;"> -i </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g</span><span style="color:#c0c5ce;">&quot; /etc/apt/sources.list
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#bf616a;">apt-get</span><span style="color:#c0c5ce;"> update
+</span><span style="color:#c0c5ce;">
+</span></code></pre></li>
+</ul>
+<br/>
+---
+<ul>
+<li>
+<p>Centos 静态ip</p>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">vim</span><span style="color:#c0c5ce;"> /etc/sysconfig/network-scripts/ifcfg-eth0
+</span><span style="color:#bf616a;">BOOTPROTO</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">static
+</span><span style="color:#bf616a;">ONBOOT</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">yes
+</span><span style="color:#bf616a;">IPADDR</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.1.73
+</span><span style="color:#bf616a;">GATEWAY</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.1.1
+</span><span style="color:#bf616a;">NETMASK</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">255.255.255.0
+</span><span style="color:#bf616a;">DNS1</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.1.1
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#bf616a;">systemctl</span><span style="color:#c0c5ce;"> restart network
+</span><span style="color:#bf616a;">/etc/init.d/network</span><span style="color:#c0c5ce;"> restart
+</span></code></pre></li>
+<li>
+<p>Debian 静态IP</p>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> vim /etc/netplan/50-cloud-init.yaml
+</span><span style="color:#bf616a;">network:
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">ethernets:
+</span><span style="color:#c0c5ce;">        </span><span style="color:#bf616a;">ens33:
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">dhcp4:</span><span style="color:#c0c5ce;"> no
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">addresses: </span><span style="color:#b48ead;">[</span><span style="color:#c0c5ce;">192.168.1.100/24</span><span style="color:#b48ead;">]
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">gateway4:</span><span style="color:#c0c5ce;"> 192.168.1.1
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">nameservers:
+</span><span style="color:#c0c5ce;">                    </span><span style="color:#bf616a;">addresses: </span><span style="color:#b48ead;">[</span><span style="color:#c0c5ce;">192.168.1.1</span><span style="color:#b48ead;">]
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">version:</span><span style="color:#c0c5ce;"> 2
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> netplan apply
+</span></code></pre></li>
+</ul>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;tags&#x2F;linux&#x2F;">#linux</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;blog.51hint.com&#x2F;ansible&#x2F;">‹ ansible</a>
+                    
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;even.js" ></script>
+
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;elasticlunr.min.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search_index.en.js"></script>
+          <script type="text/javascript" src="https:&#x2F;&#x2F;blog.51hint.com&#x2F;search.js"></script>
+
+
+
+      
+    </body>
+
+</html>
