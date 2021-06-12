@@ -165,7 +165,7 @@
 </span></code></pre></li>
 </ul>
 <br/>
----
+<hr />
 <ul>
 <li>
 <p>Centos 静态ip</p>
@@ -173,10 +173,10 @@
 <code class="language-bash" data-lang="bash"><span style="color:#bf616a;">vim</span><span style="color:#c0c5ce;"> /etc/sysconfig/network-scripts/ifcfg-eth0
 </span><span style="color:#bf616a;">BOOTPROTO</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">static
 </span><span style="color:#bf616a;">ONBOOT</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">yes
-</span><span style="color:#bf616a;">IPADDR</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.1.73
-</span><span style="color:#bf616a;">GATEWAY</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.1.1
+</span><span style="color:#bf616a;">IPADDR</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.50.51
+</span><span style="color:#bf616a;">GATEWAY</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.50.1
 </span><span style="color:#bf616a;">NETMASK</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">255.255.255.0
-</span><span style="color:#bf616a;">DNS1</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.1.1
+</span><span style="color:#bf616a;">DNS1</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">192.168.50.1
 </span><span style="color:#c0c5ce;">
 </span><span style="color:#bf616a;">systemctl</span><span style="color:#c0c5ce;"> restart network
 </span><span style="color:#bf616a;">/etc/init.d/network</span><span style="color:#c0c5ce;"> restart
@@ -184,18 +184,33 @@
 <li>
 <p>Debian 静态IP</p>
 <pre style="background-color:#2b303b;">
-<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> vim /etc/netplan/50-cloud-init.yaml
-</span><span style="color:#bf616a;">network:
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">ethernets:
-</span><span style="color:#c0c5ce;">        </span><span style="color:#bf616a;">ens33:
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">dhcp4:</span><span style="color:#c0c5ce;"> no
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">addresses: </span><span style="color:#b48ead;">[</span><span style="color:#c0c5ce;">192.168.1.100/24</span><span style="color:#b48ead;">]
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">gateway4:</span><span style="color:#c0c5ce;"> 192.168.1.1
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">nameservers:
-</span><span style="color:#c0c5ce;">                    </span><span style="color:#bf616a;">addresses: </span><span style="color:#b48ead;">[</span><span style="color:#c0c5ce;">192.168.1.1</span><span style="color:#b48ead;">]
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">version:</span><span style="color:#c0c5ce;"> 2
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">vim</span><span style="color:#c0c5ce;"> /etc/network/interfaces
+</span><span style="color:#65737e;">#iface eth0 inet dhcp
+</span><span style="color:#bf616a;">auto</span><span style="color:#c0c5ce;"> eth0
+</span><span style="color:#bf616a;">iface</span><span style="color:#c0c5ce;"> eth0 inet static
+</span><span style="color:#bf616a;">address</span><span style="color:#c0c5ce;"> 192.168.50.55
+</span><span style="color:#bf616a;">netmask</span><span style="color:#c0c5ce;"> 255.255.255.0
+</span><span style="color:#bf616a;">gateway</span><span style="color:#c0c5ce;"> 192.168.50.1
 </span><span style="color:#c0c5ce;">
+</span><span style="color:#bf616a;">/etc/init.d/networking</span><span style="color:#c0c5ce;"> restart
+</span><span style="color:#c0c5ce;">
+</span></code></pre></li>
+<li>
+<p>Ubuntu 静态IP</p>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> vim /etc/netplan/00-installer-config.yaml
+</span><span style="color:#bf616a;">network:
+</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">ethernets:
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">eth0:
+</span><span style="color:#c0c5ce;">      </span><span style="color:#bf616a;">dhcp4:</span><span style="color:#c0c5ce;"> no
+</span><span style="color:#c0c5ce;">      </span><span style="color:#bf616a;">addresses: </span><span style="color:#b48ead;">[</span><span style="color:#c0c5ce;">192.168.50.56/24</span><span style="color:#b48ead;">]
+</span><span style="color:#c0c5ce;">      </span><span style="color:#bf616a;">gateway4:</span><span style="color:#c0c5ce;"> 192.168.50.1
+</span><span style="color:#c0c5ce;">      </span><span style="color:#bf616a;">nameservers:
+</span><span style="color:#c0c5ce;">              </span><span style="color:#bf616a;">addresses: </span><span style="color:#b48ead;">[</span><span style="color:#c0c5ce;">192.168.50.1</span><span style="color:#b48ead;">]
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">version:</span><span style="color:#c0c5ce;"> 2
 </span><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> netplan apply
+</span><span style="color:#c0c5ce;">
 </span></code></pre></li>
 </ul>
 
